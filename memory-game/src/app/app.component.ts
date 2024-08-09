@@ -6,8 +6,12 @@ import { RouterOutlet } from '@angular/router';
   standalone: true,
   imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
 export class AppComponent {
-  title = 'memory-game';
+  private socket: any;
+
+  ngOnInit() {
+    console.log('Connecting to server...');
+  }
 }

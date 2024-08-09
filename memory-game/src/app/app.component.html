@@ -46,58 +46,64 @@
       <section class="memory-game">
         <div class="memory-card">
           <img class="front-face" />
-          <img class="back-face" src="/img/olympics.svg" alt="Olympics" />
+          <img class="back-face" src="olympics.svg" alt="Olympics" />
         </div>
         <div class="memory-card">
           <img class="front-face" />
-          <img class="back-face" src="/img/olympics.svg" alt="Olympics" />
+          <img class="back-face" src="olympics.svg" alt="Olympics" />
         </div>
 
         <div class="memory-card">
           <img class="front-face" />
-          <img class="back-face" src="/img/olympics.svg" alt="Olympics" />
+          <img class="back-face" src="olympics.svg" alt="Olympics" />
         </div>
         <div class="memory-card">
           <img class="front-face" />
-          <img class="back-face" src="/img/olympics.svg" alt="Olympics" />
+          <img class="back-face" src="olympics.svg" alt="Olympics" />
         </div>
         <div class="memory-card">
           <img class="front-face" />
-          <img class="back-face" src="/img/olympics.svg" alt="Olympics" />
+          <img class="back-face" src="olympics.svg" alt="Olympics" />
         </div>
         <div class="memory-card">
           <img class="front-face" />
-          <img class="back-face" src="/img/olympics.svg" alt="Olympics" />
+          <img class="back-face" src="olympics.svg" alt="Olympics" />
         </div>
         <div class="memory-card">
           <img class="front-face" />
-          <img class="back-face" src="/img/olympics.svg" alt="Olympics" />
+          <img class="back-face" src="olympics.svg" alt="Olympics" />
         </div>
         <div class="memory-card">
           <img class="front-face" />
-          <img class="back-face" src="/img/olympics.svg" alt="Olympics" />
+          <img class="back-face" src="olympics.svg" alt="Olympics" />
         </div>
         <div class="memory-card">
           <img class="front-face" />
-          <img class="back-face" src="/img/olympics.svg" alt="Olympics" />
+          <img class="back-face" src="olympics.svg" alt="Olympics" />
         </div>
         <div class="memory-card">
           <img class="front-face" />
-          <img class="back-face" src="/img/olympics.svg" alt="Olympics" />
+          <img class="back-face" src="olympics.svg" alt="Olympics" />
         </div>
         <div class="memory-card">
           <img class="front-face" />
-          <img class="back-face" src="/img/olympics.svg" alt="Olympics" />
+          <img class="back-face" src="olympics.svg" alt="Olympics" />
         </div>
         <div class="memory-card">
           <img class="front-face" />
-          <img class="back-face" src="/img/olympics.svg" alt="Olympics" />
+          <img class="back-face" src="olympics.svg" alt="Olympics" />
         </div>
       </section>
     </section>
-
     <script src="/socket.io/socket.io.js"></script>
-    <script src="/js/index.js"></script>
-    <script></script>
+    <script>
+      const socket = io();
+
+      socket.on('hello', (data) => {
+        console.log(data);
+      });
+
+      socket.emit('hello', 'Hello from client');
+    </script>
   </body>
 </html>
